@@ -22,9 +22,9 @@ public class CommonMethods {
 
     public void validatePropertyIsInteger(int id){
         try {
-            assertThat(id, instanceOf(Integer.class));
+            assertThat(id , instanceOf(Integer.class));
         } catch (Throwable error){
-            assertionErrors.add(error);
+            assertionErrors.add(error );
         }
     }
 
@@ -73,5 +73,12 @@ public class CommonMethods {
         } catch (Throwable error){
             assertionErrors.add(error);
         }
+    }
+    public void validatePropertyIsBoolean (Response response, String jsonPath){
+        try {
+        assertThat(response.path(jsonPath), instanceOf(Boolean.class));
+    } catch (Throwable error){
+        assertionErrors.add(error);
+    }
     }
 }
