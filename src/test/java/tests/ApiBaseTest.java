@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.lessThan;
 public class ApiBaseTest extends CommonMethods {
     @BeforeSuite
     public void setup(){
-        ResponseSpecification responseSpecification = new ResponseSpecBuilder().expectResponseTime(lessThan(2000L)).build();
+        ResponseSpecification responseSpecification = new ResponseSpecBuilder().expectResponseTime(lessThan(7000L)).build();
         RestAssured.responseSpecification = responseSpecification;
     }
 

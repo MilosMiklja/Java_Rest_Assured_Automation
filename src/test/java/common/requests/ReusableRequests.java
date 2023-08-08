@@ -20,7 +20,7 @@ public class ReusableRequests {
                 .contentType(ContentType.JSON)
                 .when()
                 .get(endpoint)
-                .then()
+                .then().log().all()
                 .extract().response();
         return response;
     }
